@@ -1,0 +1,45 @@
+display-flex() {
+  display: -ms-flexbox;
+  display: -webkit-flex;
+  display: flex;
+}
+
+flex-grow(value) {
+  vendor-mw(flex-grow, value);
+}
+
+flex-shrink(value) {
+  vendor-mw(flex-shrink, value);
+}
+flex-basis(value) {
+  vendor-mw(flex-basis, value);
+}
+flex-direction(value){
+  vendor-mw(flex-direction, value);
+}
+flex-wrap(value) {
+  vendor-mw(flex-wrap, value);
+}
+align-items(value) {
+  // value: flex-start | flex-end | center | baseline | stretch;
+  vendor-mw(align-items, value);
+}
+
+align-self(value) {
+  // value: auto|stretch|center|flex-start|flex-end|baseline|initial|inherit;
+  vendor-mw(align-self, value);
+}
+justify-content(value) {
+  // value: flex-start | flex-end | center | space-between | space-around;
+  vendor-mw(justify-content, value);
+}
+flex(value) {
+  vendor-mw(flex, value);
+}
+order(value) {
+  vendor-mw(order, value);
+}
+// keep the same in all browsers
+flex-scale(value, basis = auto) {
+  flex(value, value, basis)
+}

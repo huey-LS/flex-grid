@@ -1,0 +1,18 @@
+{
+  "name": "flex-grid",
+  "version": "0.0.1",
+  "description": "以flex为基础的css布局方案",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "build": "gulp build"
+  },
+  "author": "ignous",
+  "email": "lizhygm@sina.com",
+  "license": "MIT",
+  "dependencies": {
+    "gulp": "^3.9.1",
+    "gulp-stylus": "^2.3.1",
+    "stylus": "^0.54.5"
+  }
+}

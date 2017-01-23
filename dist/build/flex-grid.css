@@ -1,0 +1,265 @@
+a,
+abbr,
+address,
+article,
+aside,
+audio,
+b,
+blockquote,
+body,
+caption,
+cite,
+code,
+dd,
+del,
+dfn,
+dialog,
+div,
+dl,
+dt,
+em,
+fieldset,
+figure,
+footer,
+form,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+header,
+hgroup,
+hr,
+html,
+i,
+iframe,
+img,
+ins,
+kbd,
+label,
+legend,
+li,
+mark,
+menu,
+nav,
+object,
+ol,
+p,
+pre,
+q,
+samp,
+section,
+small,
+span,
+strong,
+sub,
+sup,
+table,
+tbody,
+td,
+tfoot,
+th,
+thead,
+time,
+tr,
+ul,
+var,
+video {
+  border: 0;
+  margin: 0;
+  outline: 0;
+  padding: 0;
+  font-size: 100%;
+  font-weight: normal;
+}
+article,
+aside,
+details,
+figcaption,
+figure,
+footer,
+header,
+hgroup,
+nav,
+section {
+  display: block;
+}
+audio,
+canvas,
+video {
+  display: inline-block;
+  *display: inline;
+  *zoom: 1;
+}
+audio:not([controls]) {
+  display: none;
+}
+[hidden] {
+  display: none;
+}
+html {
+  width: 100%;
+  height: 100%;
+  font-size: 100%;
+  -webkit-text-size-adjust: 100%;
+  -ms-text-size-adjust: 100%;
+}
+body {
+  margin: 0;
+  padding: 0;
+  width: 100%;
+  height: 100%;
+  overflow-y: visible !important;
+  -webkit-touch-callout: none;
+  -webkit-user-select: none;
+  -moz-user-select: moz-none;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  -o-user-select: none;
+  user-select: none;
+}
+body * {
+  margin: 0;
+  padding: 0;
+}
+a {
+  text-decoration: none;
+  -webkit-tap-highlight-color: rgba(0,0,0,0);
+}
+a :hover {
+  opacity: 1;
+}
+img {
+  border: 0;
+  -ms-interpolation-mode: bicubic;
+  vertical-align: middle;
+  font-size: 0;
+}
+table {
+  border-collapse: collapse;
+  border-spacing: 0;
+}
+th,
+td,
+caption {
+  vertical-align: top;
+  text-align: left;
+}
+body > aside,
+body > section {
+  display: -ms-flexbox;
+  display: -webkit-flex;
+  display: flex;
+  -ms-flex-direction: column;
+  -webkit-flex-direction: column;
+  flex-direction: column;
+/* ================ HEADER/FOOTER ================ */
+/* ================ ARTICLE ================ */
+}
+body > aside > header,
+body > section > header,
+body > aside > footer,
+body > section > footer {
+  -ms-flex: 0;
+  -webkit-flex: 0;
+  flex: 0;
+  z-index: 3;
+  position: relative;
+}
+body > aside > header > nav,
+body > section > header > nav,
+body > aside > footer > nav,
+body > section > footer > nav {
+  -ms-flex: 0;
+  -webkit-flex: 0;
+  flex: 0;
+}
+body > aside > header,
+body > section > header {
+  -ms-order: 1;
+  -webkit-order: 1;
+  order: 1;
+}
+body > aside > article,
+body > section > article {
+  -ms-flex: 1;
+  -webkit-flex: 1;
+  flex: 1;
+  -ms-order: 2;
+  -webkit-order: 2;
+  order: 2;
+}
+body > aside > footer,
+body > section > footer {
+  -ms-order: 3;
+  -webkit-order: 3;
+  order: 3;
+}
+body > aside > article,
+body > section > article {
+  visibility: hidden;
+  display: none;
+}
+body > aside.show > article.active,
+body > section.show > article.active,
+body > aside.hide > article.active,
+body > section.hide > article.active,
+body > aside.hiding > article.active,
+body > section.hiding > article.active {
+  visibility: visible;
+  z-index: 1;
+  height: inherit;
+}
+body > aside.show > article.active:not(.flex-box),
+body > section.show > article.active:not(.flex-box),
+body > aside.hide > article.active:not(.flex-box),
+body > section.hide > article.active:not(.flex-box),
+body > aside.hiding > article.active:not(.flex-box),
+body > section.hiding > article.active:not(.flex-box) {
+  display: block;
+}
+body > section {
+  width: inherit;
+  z-index: -1;
+}
+body > section.show {
+  z-index: 1;
+}
+body > aside {
+  display: none;
+  z-index: -1;
+}
+body > aside.active,
+body > aside.show {
+  display: -ms-flexbox;
+  display: -webkit-flex;
+  display: flex;
+}
+body > aside.show {
+  z-index: 0;
+}
+body > aside.right {
+  right: 0;
+}
+body [data-os=ios] [data-os=android],
+body [data-os=ios] [data-os=blackerry],
+body [data-os=ios] [data-os=firefoxos] {
+  display: none;
+}
+body [data-os=android] [data-os=ios],
+body [data-os=android] [data-os=blackerry],
+body [data-os=android] [data-os=firefoxos] {
+  display: none;
+}
+body [data-os=blackberry] [data-os=android],
+body [data-os=blackberry] [data-os=ios],
+body [data-os=blackberry] [data-os=firefoxos] {
+  display: none;
+}
+body [data-os=firefoxos] [data-os=android],
+body [data-os=firefoxos] [data-os=ios],
+body [data-os=firefoxos] [data-os=blackberry] {
+  display: none;
+}

@@ -1,0 +1,118 @@
+
+body {
+  /* ================================================================
+      ASIDE/SECTION
+     ================================================================ */
+  > aside,
+  > section {
+    display-flex();
+    flex-direction: column;
+    //translate3d(0, 0, 0);
+
+    /* ================ HEADER/FOOTER ================ */
+    > header,
+    > footer {
+      flex-scale(0);
+      z-index: 3;
+      position: relative;
+
+      > nav {
+        flex-scale(0);
+      }
+    }
+
+    > header {
+      order(1);
+    }
+
+    > article {
+      flex-scale(1);
+      order(2);
+    }
+
+    > footer {
+      order(3);
+    }
+
+    /* ================ ARTICLE ================ */
+    > article {
+      visibility: hidden;
+      display: none;
+    }
+    &.show > article.active,
+    &.hide > article.active,
+    &.hiding > article.active {
+      visibility: visible;
+      z-index: 1;
+      height: inherit;
+
+      &:not(.flex-box){
+        display: block;
+      }
+    }
+  }
+
+  /* ================================================================
+      SECTION
+     ================================================================ */
+  > section {
+    width: inherit;
+    z-index: -1;
+    &.show {
+      z-index: 1;
+    }
+  }
+
+  /* ================================================================
+      ASIDE (todo next)
+     ================================================================ */
+  > aside {
+    display: none;
+    z-index: -1;
+
+    &.active,
+    &.show {
+      display-flex();
+    }
+    &.show {
+      z-index: 0;
+    }
+    &.right {
+      right: 0;
+    }
+  }
+
+  /* ================================================================
+      EXCLUDE OS
+     ================================================================ */
+
+  [data-os=ios] {
+    [data-os=android],
+    [data-os=blackerry],
+    [data-os=firefoxos] {
+      display: none;
+    }
+  }
+
+  [data-os=android] {
+    [data-os=ios],
+    [data-os=blackerry],
+    [data-os=firefoxos] {
+      display: none;
+    }
+  }
+  [data-os=blackberry] {
+    [data-os=android],
+    [data-os=ios],
+    [data-os=firefoxos] {
+      display: none;
+    }
+  }
+  [data-os=firefoxos] {
+    [data-os=android],
+    [data-os=ios],
+    [data-os=blackberry] {
+      display: none;
+    }
+  }
+}
