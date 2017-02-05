@@ -1,21 +1,23 @@
+@import '__vendor.styl';
+
 // Box sizing
 box-sizing(value) {
-  vendor-webkit(box-sizing, value);
+  vendor('w', box-sizing, value);
 }
 
 // Border radius
 border-radius(value) {
-  vendor(border-radius, value);
+  vendor('fmow', border-radius, value);
 }
 
 // Backface visibility
 backface-visibility(visibility) {
-  vendor-webkit(backface-visibili, visibility);
+  vendor('w', backface-visibili, visibility);
 }
 
 // Box shadows
 box-shadow(shadow) {
-  vendor-webkit(box-shadow, shadow);
+  vendor('w', box-shadow, shadow);
 }
 
 // User select
@@ -23,10 +25,10 @@ box-shadow(shadow) {
 // -moz-: firefox
 // -webkit-: chrome, safari. opera, ios safari, android
 user-select(select) {
-  vendor(user-select, select);
+  vendor('mfw', user-select, select);
 }
 
 // Appearance
 appearance(value) {
-  vendor-wf(appearance, value);
+  vendor('wf', appearance, value);
 }

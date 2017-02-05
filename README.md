@@ -6,3 +6,6 @@
 npm install
 npm run build
 ```
+
+## support
+ie10+, chrome, safari..

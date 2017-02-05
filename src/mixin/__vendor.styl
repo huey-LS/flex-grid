@@ -1,0 +1,20 @@
+//vendor-prefixes
+// w: -webkit-
+// f: -moz-
+// m: -ms-
+// o: -o-
+vendor(prefixes, name, args) {
+  if(match('f', prefixes)) {
+    -moz-{name}: args;
+  }
+  if(match('m', prefixes)) {
+    -ms-{name}: args;
+  }
+  if(match('o', prefixes)) {
+    -o-{name}: args;
+  }
+  if(match('w', prefixes)) {
+    -webkit-{name}: args;
+  }
+  {name}: args;
+}
