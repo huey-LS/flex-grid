@@ -1,0 +1,71 @@
+@import '../mixin';
+
+/* =============== CLASSES =============== */
+.hidden {
+  display: none;
+}
+.block {
+  display: block;
+}
+.inline {
+  display: inline;
+}
+.inline-block {
+  display: inline-block;
+}
+.on-left {
+  float: left;
+}
+.on-right {
+  float: right;
+}
+.flex-box {
+  display-flex();
+
+  & > .flex-order-first,
+  & > .flex-order-middle,
+  & > .flex-order-last {
+    &:not(.flex-box),
+    &:not(.hidden) {
+      display: block;
+    }
+  }
+}
+.flex-scale {
+  flex-scale(1);
+}
+.un-flex-scale {
+  flex-scale(0);
+}
+.flex-order-first {
+  order(1);
+}
+.flex-order-middle {
+  order(2);
+}
+.flex-order-last {
+  order(3);
+}
+.flex-direction-column {
+  flex-direction(column);
+}
+.flex-direction-row {
+  flex-direction(row);
+}
+.ellipsis {
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+
+/* =============== Scroll ================ */
+.scroll {
+  overflow-x: hidden;
+  overflow-y: auto;
+  -webkit-overflow-scrolling: touch;
+}
+.scroll-x {
+  overflow-x: auto;
+  overflow-y: hidden;
+  -webkit-overflow-scrolling: touch;
+}

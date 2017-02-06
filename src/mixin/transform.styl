@@ -3,41 +3,74 @@
 // Transformations
 // -ms-: ie 9;
 scale(ratio) {
-  vendor('wmo', transform, scale(ratio));
-}
-scale(ratioX, ratioY) {
-  vendor('wmo', transform, scale(ratioX, ratioY));
+  if(mixin) {
+    vendor('wm', transform, scale(ratio));
+  } else {
+    'scale(' + ratio + ')'
+  }
 }
 scaleX(ratio) {
-  vendor('wmo', transform, scaleX(ratio));
+  if(mixin) {
+    vendor('wm', transform, 'scaleX(' + ratio + ')');
+  } else {
+    'scaleX(' + ratio + ')'
+  }
 }
 scaleY(ratio) {
-  vendor('wmo', transform, scaleY(ratio));
+  if(mixin) {
+    vendor('wm', transform, 'scaleY(' +ratio + ')');
+  } else {
+    'scaleY(' +ratio + ')'
+  }
 }
 skew(x, y) {
-  vendor('wmo', transform, skewX(x) skewY(y));
+  if(mixin) {
+    vendor('wm', transform, 'skewX(' + x + ') skewY(' + y + ')');
+  } else {
+    'skewX(' + x + ') skewY(' + y + ')'
+  }
 }
 translate(x, y) {
-  vendor('wmo', transform, translate(x, y));
+  if(mixin) {
+    vendor('wm', transform, 'translate(' + x +', ' + y + ')');
+  } else {
+    'translate(' + x +', ' + y + ')'
+  }
 }
 translate3d(x, y, z) {
-  vendor('wmo', transform, translate3d(x, y, z));
+  if(mixin) {
+    vendor('wm', transform, 'translate3d(' + x +',' + y + ', ' + z +')');
+  } else {
+    'translate3d(' + x +',' + y + ', ' + z +')'
+  }
 }
 rotate(degrees) {
-  vendor('wmo', transform, rotate(degrees));
+  if(mixin) {
+    vendor('wm', transform, 'rotate(' + degrees + ')');
+  } else {
+    'rotate(' + degrees + ')'
+  }
 }
 rotateX(degrees) {
-  vendor('wmo', transform, rotateX(degrees));
+  if(mixin) {
+    vendor('wm', transform, 'rotateX(' + degrees + ')');
+  } else {
+    'rotateX(' + degrees + ')'
+  }
 }
 rotateY(degrees) {
-  vendor('wmo', transform, rotateY(degrees));
+  if(mixin) {
+    vendor('wm', transform, 'rotateY(' + degrees + ')');
+  } else {
+    'rotateY(' + degrees + ')'
+  }
 }
 perspective(value) {
-  vendor('wmo', perspective, value);
+  vendor('wm', perspective, value);
 }
 perspective-origin(perspective) {
-  vendor('wmo', perspective-origin, perspective);
+  vendor('wm', perspective-origin, perspective);
 }
 transform-origin(origin) {
-  vendor('wmo', transform-origin, origin);
+  vendor('wm', transform-origin, origin);
 }
